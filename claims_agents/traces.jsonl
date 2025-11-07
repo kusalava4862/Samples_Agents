@@ -1,0 +1,36 @@
+{"name": "validate_cpt_icd_codes", "status": "start", "timestamp": 109371.2325484}
+{"name": "agent", "type": "node", "status": "start", "timestamp": 109373.0577321}
+{"name": "agent", "type": "node", "status": "end", "timestamp": 109373.0577517}
+{"name": "tools", "type": "node", "status": "start", "timestamp": 109378.976236}
+{"name": "tools", "type": "node", "status": "end", "timestamp": 109378.9767807}
+{"name": "validate_cpt_icd_codes", "status": "start", "timestamp": 109401.9018874}
+{"name": "agent", "type": "node", "status": "start", "timestamp": 109407.5003294}
+{"name": "agent", "type": "node", "status": "end", "timestamp": 109407.5003361}
+{"name": "tools", "type": "node", "status": "start", "timestamp": 109414.3548996}
+{"name": "tools", "type": "node", "status": "end", "timestamp": 109414.3549964}
+{"name": "validate_codes_with_agent", "status": "start", "timestamp": 110682.3304007}
+{"name": "llm_reasoning_step", "type": "node", "status": "start", "timestamp": 110684.7174398}
+{"name": "llm_reasoning_step", "type": "node", "status": "end", "timestamp": 110684.7174587}
+{"name": "lookup_cpt_code", "type": "node", "status": "start", "timestamp": 110691.2036559}
+{"name": "lookup_cpt_code", "type": "node", "status": "end", "timestamp": 110691.2038501}
+{"name": "lookup_cpt_code_2", "type": "node", "status": "start", "timestamp": 110691.2270717}
+{"name": "lookup_cpt_code_2", "type": "node", "status": "end", "timestamp": 110691.2271712}
+{"name": "lookup_cpt_code_3", "type": "node", "status": "start", "timestamp": 110691.3796395}
+{"name": "lookup_cpt_code_3", "type": "node", "status": "end", "timestamp": 110691.379751}
+{"name": "lookup_icd_code", "type": "node", "status": "start", "timestamp": 110691.470975}
+{"name": "lookup_icd_code", "type": "node", "status": "end", "timestamp": 110691.4712108}
+{"name": "llm_reasoning_step_2", "type": "node", "status": "start", "timestamp": 110697.4312709}
+{"name": "llm_reasoning_step_2", "type": "node", "status": "end", "timestamp": 110697.4313878}
+{"name": "validate_codes_with_agent", "status": "start", "timestamp": 110711.5905862}
+{"name": "llm_reasoning_step", "type": "node", "status": "start", "timestamp": 110713.1779532}
+{"name": "llm_reasoning_step", "type": "node", "status": "end", "timestamp": 110713.1779652}
+{"name": "lookup_cpt_code", "type": "node", "status": "start", "timestamp": 110719.1790437}
+{"name": "lookup_cpt_code", "type": "node", "status": "end", "timestamp": 110719.1793576}
+{"name": "lookup_cpt_code_2", "type": "node", "status": "start", "timestamp": 110719.3429913}
+{"name": "lookup_cpt_code_2", "type": "node", "status": "end", "timestamp": 110719.3430662}
+{"name": "lookup_cpt_code_3", "type": "node", "status": "start", "timestamp": 110719.3432691}
+{"name": "lookup_cpt_code_3", "type": "node", "status": "end", "timestamp": 110719.3433576}
+{"name": "lookup_icd_code", "type": "node", "status": "start", "timestamp": 110719.3434841}
+{"name": "lookup_icd_code", "type": "node", "status": "end", "timestamp": 110719.3435273}
+{"name": "llm_reasoning_step_2", "type": "node", "status": "start", "timestamp": 110724.8641401}
+{"name": "llm_reasoning_step_2", "type": "node", "status": "end", "timestamp": 110724.8642094}

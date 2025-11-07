@@ -1,0 +1,53 @@
+---
+config:
+  flowchart:
+    curve: linear
+---
+graph TD
+    %% Main Graph Structure
+    START([START]):::start
+    validate_node[validate_cpt_icd_codes<br/>Node]:::main
+    END([END]):::end
+    
+    START --> validate_node
+    validate_node --> END
+    
+    %% Internal ReAct Agent Graph (expanded view)
+    subgraph react_agent["Internal ReAct Agent Graph<br/>(Created by create_react_agent)"]
+        direction TB
+        agent_start([Agent Start]):::agent_start
+        should_continue{Should Continue?}:::decision
+        action_node[Action Node<br/>LLM decides tool to call]:::action
+        tool_cpt[cpt_lookup Tool]:::tool
+        tool_icd[icd_lookup Tool]:::tool
+        tool_email[send_email Tool]:::tool
+        observation[Observation<br/>Tool results]:::observation
+        final_answer[Final Answer]:::final
+        
+        agent_start --> should_continue
+        should_continue -->|Continue| action_node
+        action_node -->|calls| tool_cpt
+        action_node -->|calls| tool_icd
+        action_node -->|calls| tool_email
+        tool_cpt --> observation
+        tool_icd --> observation
+        tool_email --> observation
+        observation --> should_continue
+        should_continue -->|Done| final_answer
+        final_answer --> agent_end([Agent End]):::agent_end
+    end
+    
+    %% Show that validate_node contains the ReAct agent
+    validate_node -.->|contains| react_agent
+    
+    %% Styling
+    classDef start fill:#90EE90,stroke:#006400,stroke-width:2px
+    classDef end fill:#FFB6C1,stroke:#8B0000,stroke-width:2px
+    classDef main fill:#87CEEB,stroke:#4682B4,stroke-width:2px
+    classDef agent_start fill:#DDA0DD,stroke:#8B008B,stroke-width:2px
+    classDef agent_end fill:#DDA0DD,stroke:#8B008B,stroke-width:2px
+    classDef decision fill:#FFD700,stroke:#FF8C00,stroke-width:2px
+    classDef action fill:#98FB98,stroke:#2E8B57,stroke-width:2px
+    classDef tool fill:#F0E68C,stroke:#B8860B,stroke-width:2px
+    classDef observation fill:#ADD8E6,stroke:#000080,stroke-width:2px
+    classDef final fill:#FFA07A,stroke:#CD5C5C,stroke-width:2px

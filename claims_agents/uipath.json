@@ -1,0 +1,83 @@
+{
+    "entryPoints": [
+        {
+            "filePath": "validate-coding-agent",
+            "uniqueId": "e71b3672-bda7-4ad8-8313-7f4afeb83240",
+            "type": "agent",
+            "input": {
+                "type": "object",
+                "properties": {
+                    "claim_data": {
+                        "title": "Claim Data",
+                        "type": "string"
+                    },
+                    "discharge_summary": {
+                        "title": "Discharge Summary",
+                        "type": "string"
+                    },
+                    "provider_email": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "claim_data",
+                    "discharge_summary"
+                ]
+            },
+            "output": {
+                "type": "object",
+                "properties": {
+                    "claim_valid": {
+                        "default": null,
+                        "title": "Claim Valid",
+                        "type": "boolean"
+                    },
+                    "justification": {
+                        "default": null,
+                        "title": "Justification",
+                        "type": "string"
+                    }
+                },
+                "required": []
+            }
+        },
+        {
+            "filePath": "validate-policy-terms-agent",
+            "uniqueId": "f82c4783-ceb8-5bc9-b421-4b5fcf83241",
+            "type": "agent",
+            "input": {
+                "type": "object",
+                "properties": {
+                    "claim_data": {
+                        "title": "Claim Data",
+                        "type": "string",
+                        "description": "JSON string containing claim_id, patient_id, policy_id, date_of_service, and claim_lines with CPT and ICD codes"
+                    }
+                },
+                "required": [
+                    "claim_data"
+                ]
+            },
+            "output": {
+                "type": "object",
+                "properties": {
+                    "claim_valid": {
+                        "default": null,
+                        "title": "Claim Valid",
+                        "type": "boolean"
+                    },
+                    "justification": {
+                        "default": null,
+                        "title": "Justification",
+                        "type": "string"
+                    }
+                },
+                "required": []
+            }
+        }
+    ],
+    "bindings": {
+        "version": "2.0",
+        "resources": []
+    }
+}
